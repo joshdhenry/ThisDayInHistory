@@ -17,6 +17,8 @@
 		03C336EA1EF78FF300588209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C336E81EF78FF300588209 /* LaunchScreen.storyboard */; };
 		03C336F51EF78FF300588209 /* ThisDayInHistoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C336F41EF78FF300588209 /* ThisDayInHistoryTests.m */; };
 		03C337001EF78FF300588209 /* ThisDayInHistoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C336FF1EF78FF300588209 /* ThisDayInHistoryUITests.m */; };
+		03C3370F1EF7962D00588209 /* WikipediaAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C3370E1EF7962D00588209 /* WikipediaAPIService.m */; };
+		03C337121EF7B24B00588209 /* ThisDayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C337111EF7B24B00588209 /* ThisDayData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		03C336FB1EF78FF300588209 /* ThisDayInHistoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThisDayInHistoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C336FF1EF78FF300588209 /* ThisDayInHistoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThisDayInHistoryUITests.m; sourceTree = "<group>"; };
 		03C337011EF78FF300588209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03C3370D1EF7962D00588209 /* WikipediaAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaAPIService.h; sourceTree = "<group>"; };
+		03C3370E1EF7962D00588209 /* WikipediaAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaAPIService.m; sourceTree = "<group>"; };
+		03C337101EF7B24B00588209 /* ThisDayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThisDayData.h; sourceTree = "<group>"; };
+		03C337111EF7B24B00588209 /* ThisDayData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThisDayData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 				03C336EB1EF78FF300588209 /* Info.plist */,
 				03C336DA1EF78FF300588209 /* ThisDayInHistory.xcdatamodeld */,
 				03C336D41EF78FF300588209 /* Supporting Files */,
+				03C3370D1EF7962D00588209 /* WikipediaAPIService.h */,
+				03C3370E1EF7962D00588209 /* WikipediaAPIService.m */,
+				03C337101EF7B24B00588209 /* ThisDayData.h */,
+				03C337111EF7B24B00588209 /* ThisDayData.m */,
 			);
 			path = ThisDayInHistory;
 			sourceTree = "<group>";
@@ -286,6 +296,8 @@
 			files = (
 				03C336E21EF78FF300588209 /* DetailViewController.m in Sources */,
 				03C336DF1EF78FF300588209 /* MasterViewController.m in Sources */,
+				03C3370F1EF7962D00588209 /* WikipediaAPIService.m in Sources */,
+				03C337121EF7B24B00588209 /* ThisDayData.m in Sources */,
 				03C336DC1EF78FF300588209 /* ThisDayInHistory.xcdatamodeld in Sources */,
 				03C336D91EF78FF300588209 /* AppDelegate.m in Sources */,
 				03C336D61EF78FF300588209 /* main.m in Sources */,

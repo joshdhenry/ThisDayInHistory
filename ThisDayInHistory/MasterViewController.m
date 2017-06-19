@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "WikipediaAPIService.h"
 
 @interface MasterViewController ()
 
@@ -29,6 +30,10 @@
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     [super viewWillAppear:animated];
+    
+    WikipediaAPIService *wikipediaAPIService = [[WikipediaAPIService alloc] init];
+    NSLog(@"A");
+    [wikipediaAPIService fetchArticle];
 }
 
 
