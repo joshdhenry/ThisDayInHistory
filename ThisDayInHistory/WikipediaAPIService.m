@@ -18,7 +18,7 @@ static NSString *const articleURLBaseString = @"https://en.wikipedia.org/w/api.p
     NSURL *thisDayURL = [NSURL URLWithString:thisDayURLString];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:thisDayURL];
     
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    //NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     
     NSURLSession *session = [NSURLSession sharedSession];
     
@@ -46,33 +46,34 @@ static NSString *const articleURLBaseString = @"https://en.wikipedia.org/w/api.p
             NSDictionary *dataDict = [[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&dataError] objectForKey:@"query"];
             
             if (!dataError) {
-                NSLog(@"%@", dataDict);
-                
-                ////DO MORE STUFF HERE
-                
+                NSString *articleString = [dataDict[@"pages"] allValues][0][@"revisions"][0][@"*"];
+                [self parseThisDayArticle:articleString];
             }
             else {
                 NSLog(@"Error serializing json data.");
                 return;
             }
-        
         }
     }];
     [dataTask resume];
 }
 
 
--(void)parseThisDayArticle:(NSString *) article {
+-(void)parseThisDayArticle:(NSString *) articleStr {
     //PARSE THE ARTICLE AND SEPARATE INTO 3 STRINGS - EVENTS, BIRTHS, DEATHS
-    
+    NSString *eventString = @"Events==";
+    [articleStr rangeOfString:eventString];
+    NSUInteger eventsIndex = [articleStr rangeOfString:@"==Events=="].location;
+    NSString *events = [articleStr substringFromIndex:eventsIndex];
+    NSLog(@"%@", events);
 }
 
--(NSArray *)parseEvents:(NSString *) eventsString {
-    
-}
-
--(NSArray *)parseBirthsOrDeaths:(NSString *) birthsOrDeathsString {
-    
-}
+//-(NSArray *)parseEvents:(NSString *) eventsString {
+//    
+//}
+//
+//-(NSArray *)parseBirthsOrDeaths:(NSString *) birthsOrDeathsString {
+//    
+//}
 
 @end
